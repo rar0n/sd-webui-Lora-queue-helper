@@ -8,7 +8,6 @@ Since I started using symbolic links for my SD stuff, this nice extension by Yin
 
 I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
 Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it... so I hacked together the rest. For now.
-This should make the excellent extension by Yinzo work while using symbolic links to your Lora's.
 
 ## Install
 To install from webui, go to Extensions -> Install from URL, paste https://github.com/rar0n/sd-webui-Lora-queue-helper into the URL field, and press Install.
