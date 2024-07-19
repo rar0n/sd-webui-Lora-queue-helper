@@ -22,6 +22,7 @@ This should make the excellent extension by Yinzo work while using symbolic link
   + In short I think "Select Directory" list should only contain the parent directories of Lora directories.
 - Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either, but this is a very minor thing.
 - I do not think it applies the negative text (if present) in the Lora configuration file.
+- Sometimes some errors pop up in the console, other times not. Not sure what's up with that.
 - General clean up and make it less hacky
 
 I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's actual Lora (sub) folders in each category which contains the Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
@@ -43,7 +44,7 @@ To install from webui, go to Extensions -> Install from URL, paste https://githu
 
 ## How to use
 1. Locate the **Script** menu in the bottom left corner.
-2. Select **"Apply every Lora"** (Slightly changed title from the original)
+2. Select **"Solo apply selected Loras batch"** (Changed title from the original "Apply on every Lora")
 3. Select the **folder** that contains the Lora you want to use.
 4. Select the **lora** you want to use.
 5. Generate.
