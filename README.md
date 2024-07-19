@@ -10,8 +10,8 @@ This should make the excellent extension by Yinzo work while using symbolic link
 
 #### Todo, or wish-list:
 
-- I think it would be better if the first directory selection did not include the "last" sub-directory where the Lora(s) are. They will be included in the Lora selection listed below anyway, so this only makes the list longer.
-- I do not think it applies the negative trigger words, if present in the Lora configuration file.
+- I think it would be better if the Directory Selection list did not include the final sub-directory where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
+- I do not think it applies the negative text (if present) in the Lora configuration file.
 - General clean up and make it less hacky?
 
 Ofc, I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit (Like "Backgrounds - environments - landscapes" collated into one folder, "Characters", "Styles - concepts", "Vehicles", and other folders). Then there's subfolders in each category which again contains the Lora. This makes the directory selection list very long though.  But that might just be me.
