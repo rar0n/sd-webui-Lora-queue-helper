@@ -18,12 +18,11 @@ This should make the excellent extension by Yinzo work while using symbolic link
  + The Loras will now be applied one by one in the prompt, which is otherwise the same in each image.
  + **This extension only works for Lora's** (and now also via symbolic links).
 
-#### Todo, or wish-list:
+#### Notes:
 
 - It does **not** apply any negative prompt text (if present) in the Lora configuration file.
-- I'd like the "Select Directory" list to only show Lora directories parent directories, as the Lora's should then still be listed under the Lora heading below.
-  + I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's the Lora (sub) folders in each category which contains the actual Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
-- Some clean up and make it less hacky?
+- I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's the Lora (sub) folders in each category which contains the actual Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
+    + Ideally(?) I'd like the "Select Directory" list to only show Lora directories parent directories, and the Lora's still be listed under the Lora heading below. But for now this is it.
 
 ### Original instructions below, slightly edited for this fork
 
