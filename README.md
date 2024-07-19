@@ -4,7 +4,7 @@ Basically helpful to test different Lora's in one go (one lora at a time), like 
 
 ### For using Loras via symbolic links (or not) on Automatic1111
 
-Since I started using symbolic links for my SD stuff, this nice extension by Yinzo stopped working. But now it does! At least on my Linux Mint system. Not tested on Windows or Mac.
+Since I started using symbolic links for my SD stuff, this nice extension by Yinzo stopped working. But now it finally works again! At least on my Linux Mint system. Not tested on Windows or Mac.
 
 I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
 Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it... so I hacked together the rest. For now.
