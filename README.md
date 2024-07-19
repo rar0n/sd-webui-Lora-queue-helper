@@ -8,13 +8,20 @@ I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
 Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it.. so I hacked together the rest. For now.
 This should make the excellent extension by Yinzo work while using symbolic links to your Lora's, at least it does on my Linux Mint system. I haven't tested it on Windows.
 
+#### A few tips / my use case
+ + Tick "Use Custom Lora path", then paste in your category folder of Lora's you want to test.
+    + (My Lora folders are far too numerous to be useful without "Use Custom Lora path")
+ + If you have hard drive space limitations, use symbolic links to folders on other drives (Preferably a fast M2.nvme drive...)
+   + Then you can also easily-ish add or remove said links, to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for further batch operations
+
 #### Todo, or wish-list:
 
-- I think it would be better if the Directory Selection list did not include the final sub-directory where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
+- I think it would be better if the "Select Directory" list did not include the final sub-directory where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
+- Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either.
 - I do not think it applies the negative text (if present) in the Lora configuration file.
-- General clean up and make it less hacky?
+- General clean up and make it less hacky
 
-Ofc, I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit (Like "Backgrounds - environments - landscapes" collated into one folder, "Characters", "Styles - concepts", "Vehicles", and other folders). Then there's subfolders in each category which again contains the Lora. This makes the directory selection list very long though.  But that might just be me.
+Ofc, I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit (Like "Backgrounds - environments - landscapes" collated into one folder, "Characters", "Styles - concepts", "Vehicles", and other folders). Then there's subfolders in each category which again contains the Lora. This makes the "Select Directory" list very long though.  But that might just be me.
 However, ever since I started using symbolic links for my SD stuff, this nice extension by Yinzo didn't work. But not it does! (I hope).
 
 ### Slightly edited instructions below:
