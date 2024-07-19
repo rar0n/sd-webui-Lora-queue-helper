@@ -11,7 +11,7 @@ Unfortunately, I used up the free limit (for now) and Claude wasn't quite finish
 This should make the excellent extension by Yinzo work while using symbolic links to your Lora's.
 
 #### Usage tip (also see Tips below)
- + Tick **Use Custom Lora path**, then paste in your category folder of Lora's you want to test.
+ + Tick **Use Custom Lora path**, then paste in your category folder path of Lora's you want to test.
     + (My Lora folders are far too numerous to be useful without "Use Custom Lora path", as in the below tip #3)
  + Under **Select Directory** click "All", or just the folders you want.
  + Then under **Lora** select the Loras you want (or click "All").
@@ -20,11 +20,10 @@ This should make the excellent extension by Yinzo work while using symbolic link
 
 #### Todo, or wish-list:
 
-- It's not perfect
 - It does **not** apply any negative prompt text (if present) in the Lora configuration file.
-- General clean up and make it less hacky
 - I'd like the "Select Directory" list to only show Lora directories parent directories, as the Lora's should then still be listed under the Lora heading below.
   + I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's the Lora (sub) folders in each category which contains the actual Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
+- Some clean up and make it less hacky?
 
 ### Original instructions below, slightly edited for this fork
 
