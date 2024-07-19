@@ -8,7 +8,7 @@ Since I started using symbolic links for my SD stuff, this nice extension by Yin
 
 I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
 Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it... so I hacked together the rest. For now.
-This should make the excellent extension by Yinzo work while using symbolic links to your Lora's, at least it does on my Linux Mint system. I haven't tested it on Windows.
+This should make the excellent extension by Yinzo work while using symbolic links to your Lora's.
 
 #### A few tips / my use case
  + Tick "Use Custom Lora path", then paste in your category folder of Lora's you want to test.
