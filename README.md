@@ -47,7 +47,7 @@ Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 
 ## How to use
 1. Locate the **Script** drop-down menu in the bottom left corner.
-2. Select **"Solo apply selected Loras batch"** (Changed title from the original "Apply on every Lora")
+2. Select **Queue selected Loras (batch)** (Changed title from the original "Apply on every Lora")
 3. Select the **folder** that contains the Lora you want to use. (I suggest to use **Use Custom Lora path** instead, depending on your folder structure)
 4. Select the **lora** you want to use.
 5. Generate.
