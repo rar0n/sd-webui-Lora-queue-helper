@@ -18,8 +18,8 @@ This should make the excellent extension by Yinzo work while using symbolic link
 
 #### Todo, or wish-list:
 
-- I think it would be better if the "Select Directory" list did not include the final sub-directories where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
- - In short I think "Select Directory" list should only contain the parent directories of Lora directories (as Lora's would be listed below in the Lora list anyway).
+- I think it would be better if the "Select Directory" list did not include the final sub-directories where the Lora(s) are. They will be included in the Lora Selection list below anyway (or at least they should), so this only makes the list (way) longer.
+  + In short I think "Select Directory" list should only contain the parent directories of Lora directories.
 - Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either, but this is a very minor thing.
 - I do not think it applies the negative text (if present) in the Lora configuration file.
 - General clean up and make it less hacky
