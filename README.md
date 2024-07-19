@@ -1,28 +1,30 @@
 # Hacky fork of Yinzo's sd-webui-Lora-queue-helper
 
-### For using Loras via symbolic links on Automatic1111
-
 Basically helpful to test different Lora's in one go (one lora at a time), like making a batch with a different lora in each generated picture.
 
+### For using Loras via symbolic links on Automatic1111
+
+Since I started using symbolic links for my SD stuff, this nice extension by Yinzo didn't work. But now it does! At least on my Linux Mint system. Not tested on Windows or Mac.
+
 I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
-Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it.. so I hacked together the rest. For now.
+Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it... so I hacked together the rest. For now.
 This should make the excellent extension by Yinzo work while using symbolic links to your Lora's, at least it does on my Linux Mint system. I haven't tested it on Windows.
 
 #### A few tips / my use case
  + Tick "Use Custom Lora path", then paste in your category folder of Lora's you want to test.
     + (My Lora folders are far too numerous to be useful without "Use Custom Lora path")
  + If you have hard drive space limitations, use symbolic links to folders on other drives (Preferably a fast M2.nvme drive...)
-   + Then you can also easily-ish add or remove said links, to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for ease of further batch operations. For example in X/Y/Z plots and add checkpoint names.
+   + Then you can also easily-ish add or remove said links, to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for ease of further batch operations. For example adding only one type of SD models with "X/Y/Z plot" and "Checkpoint name" (say only SDXL, or only SD1.5).
 
 #### Todo, or wish-list:
 
 - I think it would be better if the "Select Directory" list did not include the final sub-directories where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
-- Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either.
+ - In short I think "Select Directory" list should only contain the parent directories of Lora directories (as Lora's would be listed below in the Lora list anyway).
+- Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either, but this is a very minor thing.
 - I do not think it applies the negative text (if present) in the Lora configuration file.
 - General clean up and make it less hacky
 
-Ofc, I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit (Like "Backgrounds - environments - landscapes" collated into one folder, "Characters", "Styles - concepts", "Vehicles", and other folders). Then there's subfolders in each category which again contains the Lora. This makes the "Select Directory" list very long though.  But that might just be me.
-However, ever since I started using symbolic links for my SD stuff, this nice extension by Yinzo didn't work. But not it does! (I hope).
+I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit (Like "Backgrounds - environments - landscapes" collated into one folder, "Characters", "Styles - concepts", "Vehicles", and other folders). Then there's actual Lora (sub) folders in each category which contains the Lora. This makes the "Select Directory" list very long though.  But that might just be me.
 
 ### Slightly edited instructions below:
 
