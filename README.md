@@ -13,8 +13,10 @@ This should make the excellent extension by Yinzo work while using symbolic link
 #### A few tips / my use case
  + Tick "Use Custom Lora path", then paste in your category folder of Lora's you want to test.
     + (My Lora folders are far too numerous to be useful without "Use Custom Lora path")
- + If you have hard drive space limitations, use symbolic links to folders on other drives (Preferably a fast M2.nvme drive...). There needs to be a symbolic link from each of Automatic1111's appropriate folder (Lora folder, Embeddings folder, Models folder, VAE, what have you).
+ + Automatic1111 follows any subfolders / sub directories that you make within its different resource folders, like for Lora's. And also symbolic links. So you can have it organized.
    + Using symlinks you can easily-ish add or remove said links (easier if using a script), to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for ease of further batch operations. For example adding only one type of SD models with "X/Y/Z plot" and "Checkpoint name" (say only SDXL, or only SD1.5).
+   + If you have hard drive space limitations, use symbolic links to folders on other drives (Preferably a fast M2.nvme drive). There needs to be a symbolic link from each of Automatic1111's appropriate folders (Lora folder, Embeddings folder, Models folder, VAE, what have you).
+ + This extension only works for Lora's (also if using symbolic links).
 
 #### Todo, or wish-list:
 
@@ -41,6 +43,7 @@ Helpful to compare Lora for the same character with identical prompt & settings 
 
 ## Install
 To install from webui, go to Extensions -> Install from URL, paste https://github.com/rar0n/sd-webui-Lora-queue-helper into the URL field, and press Install.
+Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 
 ## How to use
 1. Locate the **Script** menu in the bottom left corner.
