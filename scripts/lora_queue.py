@@ -73,6 +73,21 @@ def get_directories(base_path, include_root=True):
 
 # End of first part of Claude 3.5 Sonnet modificaton
 
+# In the Script class, update the get_lora function: (Claude 3.5 Sonnet modificaton)
+# Hacky mod: moved outside of class, to get access from the run method of the class.
+def get_lora(base_path, directories):
+    all_loras = []
+    for directory in directories:
+        directory_path = base_path if directory == "/" else base_path.joinpath(directory)
+        if not allowed_path(directory_path):
+            continue
+        try:
+            safetensor_files = [f.name for f in os.scandir(directory_path) if f.is_file(follow_symlinks=True) and f.name.endswith('.safetensors')]
+            all_loras.extend([os.path.splitext(f)[0] for f in safetensor_files])
+        except Exception as e:
+            print(f"Error getting Loras in {directory_path}: {e}")
+    return all_loras
+
 
 def read_json_file(file_path):
     with open(file_path, 'r') as file:
@@ -107,7 +122,7 @@ def get_lora_prompt(lora_path, json_path):
 
 class Script(scripts.Script):
     def title(self):
-        return "Apply every Lora"
+        return "Solo apply selected Loras batch"
 
     def ui(self, is_img2img):
         def update_dirs(is_use_custom_path, custom_path):
@@ -118,22 +133,6 @@ class Script(scripts.Script):
         def show_dir_textbox(enabled, custom_path):
             all_dirs = get_directories(lora_dir.joinpath(custom_path) if enabled else lora_dir)
             return gr.Textbox.update(visible=enabled), gr.CheckboxGroup.update(choices=all_dirs, value=[])
-
-
-        # In the Script class, update the get_lora function: (Claude 3.5 Sonnet modificaton)
-        def get_lora(base_path, directories):
-            all_loras = []
-            for directory in directories:
-                directory_path = base_path if directory == "/" else base_path.joinpath(directory)
-                if not allowed_path(directory_path):
-                    continue
-                try:
-                    safetensor_files = [f.name for f in os.scandir(directory_path) if f.is_file(follow_symlinks=True) and f.name.endswith('.safetensors')]
-                    all_loras.extend([os.path.splitext(f)[0] for f in safetensor_files])
-                except Exception as e:
-                    print(f"Error getting Loras in {directory_path}: {e}")
-            return all_loras
-
 
         def update_loras(current_selected, is_use_custom_path, custom_path, directories):
             base_path = get_base_path(is_use_custom_path, custom_path)
@@ -219,23 +218,6 @@ class Script(scripts.Script):
         jobs = []
 
         base_path = get_base_path(is_use_custom_path, custom_path)
-
-        # Manual add: Hacky way of getting get_lora accress at this scope
-        #I don't really know Python.. (copy of Claude 3.5 Sonnet's version above)
-        def get_lora(base_path, directories):
-            all_loras = []
-            for directory in directories:
-                directory_path = base_path if directory == "/" else base_path.joinpath(directory)
-                if not allowed_path(directory_path):
-                    continue
-                try:
-                    safetensor_files = [f.name for f in os.scandir(directory_path) if f.is_file(follow_symlinks=True) and f.name.endswith('.safetensors')]
-                    all_loras.extend([os.path.splitext(f)[0] for f in safetensor_files])
-                except Exception as e:
-                    print(f"Error getting Loras in {directory_path}: {e}")
-            return all_loras
-
-
         all_loras = get_lora(base_path, directories)
 
 
