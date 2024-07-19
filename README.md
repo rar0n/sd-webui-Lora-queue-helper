@@ -10,24 +10,21 @@ I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
 Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it... so I hacked together the rest. For now.
 This should make the excellent extension by Yinzo work while using symbolic links to your Lora's.
 
-#### A few tips / my use case
+#### Usage tip (also see Tips below)
  + Tick **Use Custom Lora path**, then paste in your category folder of Lora's you want to test.
     + (My Lora folders are far too numerous to be useful without "Use Custom Lora path", as in the below tip #3)
- + Automatic1111 follows any subfolders / sub directories that you make within its different resource folders, like for Lora's. And also symbolic links. So you can have it organized.
-   + Using symlinks you can easily-ish add or remove said links (easier if using a script), to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for ease of further batch operations. For example adding only one type of SD models with "X/Y/Z plot" and "Checkpoint name" (say only SDXL, or only SD1.5).
-   + If you have hard drive space limitations, use symbolic links to folders on other drives (Preferably a fast M2.nvme drive). There needs to be a symbolic link from each of Automatic1111's appropriate folders (Lora folder, Embeddings folder, Models folder, VAE, what have you).
- + **This extension only works for Lora's (and now also if using symbolic links)**.
+ + Under **Select Directory** click "All", or just the folders you want.
+ + Then under **Lora** select the Loras you want (or click "All").
+ + The Loras will now be applied one by one in the prompt, which is otherwise the same in each image.
+ + **This extension only works for Lora's** (and now also via symbolic links).
 
 #### Todo, or wish-list:
 
-- I think it would be better if the **Select Directory** list did not include the final sub-directories where the Lora(s) are. They will be included in the **Lora** Selection list below anyway (or at least they should be), so this only makes the list (way) longer.
-  + In short I think "Select Directory" list should only contain the parent directories of Lora directories.
-- Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either, but this is a very minor thing.
-- I do not think it applies the negative text (if present) in the Lora configuration file.
-- Sometimes some errors pop up in the console, other times (mostly?) not. Not sure what's up with that.
+- It's not perfect
+- It does **not** apply any negative prompt text (if present) in the Lora configuration file.
 - General clean up and make it less hacky
-
-I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's actual Lora (sub) folders in each category which contains the Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
+- I'd like the "Select Directory" list to only show Lora directories parent directories, as the Lora's should then still be listed under the Lora heading below.
+  + I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's the Lora (sub) folders in each category which contains the actual Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
 
 ### Original instructions below, slightly edited for this fork
 
