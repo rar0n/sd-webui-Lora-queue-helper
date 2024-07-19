@@ -12,11 +12,11 @@ This should make the excellent extension by Yinzo work while using symbolic link
  + Tick "Use Custom Lora path", then paste in your category folder of Lora's you want to test.
     + (My Lora folders are far too numerous to be useful without "Use Custom Lora path")
  + If you have hard drive space limitations, use symbolic links to folders on other drives (Preferably a fast M2.nvme drive...)
-   + Then you can also easily-ish add or remove said links, to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for further batch operations
+   + Then you can also easily-ish add or remove said links, to isolate Automatic1111'a access to SD1.5, SD2.1 or SDXL stuff (models) for ease of further batch operations. For example in X/Y/Z plots and add checkpoint names.
 
 #### Todo, or wish-list:
 
-- I think it would be better if the "Select Directory" list did not include the final sub-directory where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
+- I think it would be better if the "Select Directory" list did not include the final sub-directories where the Lora(s) are. They will be included in the Lora Selection list below anyway, so this only makes the list (way) longer.
 - Conversely, the "Select Directory" list does not need the root folder ("/") to be listed either.
 - I do not think it applies the negative text (if present) in the Lora configuration file.
 - General clean up and make it less hacky
