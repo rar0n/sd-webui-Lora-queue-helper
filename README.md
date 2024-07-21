@@ -15,19 +15,17 @@ Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 
 ## How to use
 1. Locate the **Script** drop-down menu in the bottom left corner.
-2. Select **Queue selected Loras (batch)** (Changed title from the original "Apply on every Lora")
+2. Select **Lora Queue Helper (batch)** (Changed title from the original "Apply on every Lora")
 3. Under **Select Directory** select the folders containing the Lora you want to use. Or click "All".
-   + I **strongly** suggest to use **Use Custom Lora path** instead (Depending on your folder structure. My Lora folders are far too numerous to be useful without this)
-       + Paste in your category folder path of Loras you want to use.
+   + I strongly suggest to use **Use Custom Lora path** instead (Depending on your folder structure. My Lora folders are far too numerous to be useful without this)
+       + Paste in your folder path of the category of Lora(s) you want to test / use.
 4. Select the **lora** you want to use (or click "All").
 5. Generate.
 
 #### Notes:
 
+- Place your Lora into **sub-folders** by category (like "Vehicles", "Buildings", "Styles", etc, or some such variant).
+- Use built-in Lora configuration to store **Activation Text & Preferred Weight**, which will be automatically used in this script. Otherwise, it will only apply the Lora with default 1 weight 
 - It does **not** apply any negative prompt text (if present) in the Lora configuration file.
-- I don't know how people normally structures their Lora collection (read tips below), me I have them in sub folder as categories somewhat structured after Civitai's Lora categories, although I changed it a bit. Then there's the Lora (sub) folders in each category which contains the actual Loras. This makes the "Select Directory" list very long as it currently is though. But that might just be me.
-    + Ideally(?) I'd like the "Select Directory" list to only show Lora directories parent directories, and the Lora's still be listed under the Lora heading below. But for now this is it.
-
-## Tips
-+ Place your Lora into **sub-folders** by class (or categories, like "Vehicles", "Buildings", "Styles", etc).
-+ Use built-in Lora configuration to store **Activation Text & Preferred Weight**, which will be automatically used in this script. Otherwise, it will only apply the Lora with default 1 weight.
+- Ideally(?) I'd like the "Select Directory" list to only show the parent folder of the Lora folder, and the Loras still be listed under the Lora heading below.
+- For now and the foreseeable future, this is it. (Most people seem to have moved on to ComfyUI or Forge anyway. This might still work with Forge btw, not tested).
