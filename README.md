@@ -14,7 +14,7 @@ To install from webui, go to Extensions -> Install from URL, paste https://githu
 Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 
 ## How to use
-1. Locate the **Script** drop-down menu in the bottom left corner.
+1. Locate the **Script** drop-down menu in the bottom left corner of Automatic1111 web UI.
 2. Select **Lora Queue Helper (batch)** (Changed title from the original "Apply on every Lora")
 3. Under **Select Directory** select the folders containing the Lora you want to use. Or click "All".
    + I strongly suggest to use **Use Custom Lora path** instead (Depending on your folder structure. My Lora folders are far too numerous to be useful without this)
@@ -22,10 +22,10 @@ Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 4. Select the **lora** you want to use (or click "All").
 5. Generate.
 
-#### Notes:
+#### Tips
 
-- Place your Lora into **sub-folders** by category (like "Vehicles", "Buildings", "Styles", etc, or some such variant).
+- Place your Lora into **sub-folders** by category (like "Vehicles", "Buildings", "Styles", etc, or some such).
 - Use built-in Lora configuration to store **Activation Text & Preferred Weight**, which will be automatically used in this script. Otherwise, it will only apply the Lora with default 1 weight 
 - It does **not** apply any negative prompt text (if present) in the Lora configuration file.
-- Ideally(?) I'd like the "Select Directory" list to only show the parent folder of the Lora folder, and the Loras still be listed under the Lora heading below.
-- For now and the foreseeable future, this is it. (Most people seem to have moved on to ComfyUI or Forge anyway. This might still work with Forge btw, not tested).
+
+Ideally(?) I'd like the "Select Directory" list to only show the parent folder of the Lora folders, and the Loras still be listed under the Lora heading below. But for now and the foreseeable future, this is it. (Most people seem to have moved on to ComfyUI or Forge anyway. This might still work with Forge btw, not tested).
