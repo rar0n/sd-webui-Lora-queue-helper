@@ -122,7 +122,7 @@ def get_lora_prompt(lora_path, json_path):
 
 class Script(scripts.Script):
     def title(self):
-        return "Queue selected Loras (batch)"
+        return "Lora Queue Helper (batch)"
 
     def ui(self, is_img2img):
         def update_dirs(is_use_custom_path, custom_path):
