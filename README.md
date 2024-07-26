@@ -9,9 +9,10 @@ Since I started using symbolic links for my SD stuff, this nice extension by Yin
 I don't really know Python, so I enlisted some help from Claude 3.5 Sonnet.
 Unfortunately, I used up the free limit (for now) and Claude wasn't quite finished with it... so I hacked together the rest. Seems to work.
 
-### Bug
+### Bugs
 
-I've noticed it might repeat one Lora sometimes in the middle of a Lora batch run. I'm not sure what's up with that.
+ - I've noticed it might repeat one Lora sometimes in the middle of a Lora batch run. I'm not sure what's up with that.
+ - The "Use same random seed" checkbox don't actually do anything.
 Apart from this it seems to work nice.
 
 ## Install
