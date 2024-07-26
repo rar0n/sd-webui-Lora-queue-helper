@@ -11,10 +11,10 @@ Unfortunately, I used up the free limit (for now) and Claude wasn't quite finish
 
 ### Bugs
 
- - I've noticed it might repeat one Lora sometimes in the middle of a Lora batch run. I'm not sure what's up with that.
+ - I've noticed it might repeat a Lora sometimes in the middle of a Lora batch run. I'm not sure what's up with that.
  - The "Use same random seed" checkbox don't actually do anything.
 
-Apart from this it seems to work nice.
+Otherwise it seems to work nice.
 
 ## Install
 To install from webui, go to Extensions -> Install from URL, paste https://github.com/rar0n/sd-webui-Lora-queue-helper into the URL field, and press Install.
