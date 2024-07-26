@@ -3,6 +3,7 @@ import json
 import copy
 import random
 import math
+import re
 
 import gradio as gr
 
@@ -12,68 +13,48 @@ from modules.shared import state, cmd_opts, opts
 from pathlib import Path
 
 
-# Claude 3.5 Sonnet modificaton part 1
-
 lora_dir = Path(cmd_opts.lora_dir).resolve()
-#print(f"Lora directory: {lora_dir}")
+
+# Sorting key for case insensitive alphanumeric sorting
+def natural_sort_key(s):
+    return [int(c) if c.isdigit() else c.lower() for c in re.split(r'(\d+)', s)]
 
 def allowed_path(path):
     original_path = Path(path)
     resolved_path = original_path.resolve()
     is_allowed = original_path.is_relative_to(lora_dir) or resolved_path.is_relative_to(lora_dir)
-    #print(f"Checking if path is allowed: {path}")
-    #print(f"Original path: {original_path}")
-    #print(f"Resolved path: {resolved_path}")
-    #print(f"Is allowed: {is_allowed}")
     return is_allowed
 
 def get_base_path(is_use_custom_path, custom_path):
     return lora_dir.joinpath(custom_path) if is_use_custom_path else lora_dir
 
 def is_directory_contain_lora(path):
-    #print(f"Checking if directory contains Lora: {path}")
     try:
         if allowed_path(path):
             safetensor_files = [f.name for f in os.scandir(path) if f.is_file(follow_symlinks=True) and f.name.endswith('.safetensors')]
-            #print(f"Found safetensor files: {safetensor_files}")
             return len(safetensor_files) > 0
-        #else:
-            #print(f"Path not allowed: {path}")
     except Exception as e:
         print(f"Error checking directory {path}: {e}")
     return False
 
 def get_directories(base_path, include_root=True):
-    #print(f"Getting directories for base_path: {base_path}")
     directories = ["/"] if include_root else []
     try:
         if allowed_path(base_path):
-            #print(f"Path {base_path} is allowed")
             for entry in os.scandir(base_path):
-                #print(f"Scanning entry: {entry.path}")
                 if entry.is_dir(follow_symlinks=True):
                     full_path = entry.path
-                    #print(f"Entry is a directory: {full_path}")
                     if is_directory_contain_lora(full_path):
-                        #print(f"Directory contains Lora: {entry.name}")
                         directories.append(entry.name)
-                    #else:
-                        #print(f"Directory does not contain Lora: {entry.name}")
-
                     nested_directories = get_directories(full_path, include_root=False)
                     directories.extend([os.path.join(entry.name, d) for d in nested_directories])
-        #else:
-            #print(f"Path {base_path} is not allowed")
     except FileNotFoundError:
         pass
     except Exception as e:
         print(f"Error getting directories in {base_path}: {e}")
-    #print(f"Found directories: {directories}")
-    return directories
 
-# End of first part of Claude 3.5 Sonnet modificaton
+    return sorted(directories, key=natural_sort_key)
 
-# In the Script class, update the get_lora function: (Claude 3.5 Sonnet modificaton)
 # Hacky mod: moved outside of class, to get access from the run method of the class.
 def get_lora(base_path, directories):
     all_loras = []
@@ -86,8 +67,7 @@ def get_lora(base_path, directories):
             all_loras.extend([os.path.splitext(f)[0] for f in safetensor_files])
         except Exception as e:
             print(f"Error getting Loras in {directory_path}: {e}")
-    return all_loras
-
+    return sorted(all_loras, key=natural_sort_key)
 
 def read_json_file(file_path):
     with open(file_path, 'r') as file:
@@ -248,8 +228,6 @@ class Script(scripts.Script):
 
                     jobs.append(args)
                     break  # Found the Lora, no need to check other directories
-
-    # End of Claude 3.5 modificaton part
 
         if (checkbox_iterate or checkbox_iterate_batch) and p.seed == -1:
             p.seed = int(random.randrange(4294967294))
