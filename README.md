@@ -11,8 +11,7 @@ Unfortunately, I used up the free limit (for now) and Claude wasn't quite finish
 
 ### Bugs
 
- - I've noticed it might repeat a Lora sometimes in the middle of a Lora batch run. I'm not sure what's up with that.
- - The "Use same random seed" checkbox don't actually do anything.
+ - Prior version started repeating Loras now and then on long runs. Should be fixed (unconfirmed atm)
 
 Otherwise it seems to work nice.
 
