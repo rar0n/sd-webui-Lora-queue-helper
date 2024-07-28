@@ -11,7 +11,7 @@ Unfortunately, I used up the free limit (for now) and Claude wasn't quite finish
 
 ### Bugs
 
- - Prior version started repeating Loras now and then on long runs. Should be fixed (unconfirmed atm)
+ - Apparently Lora's that Automatic1111 for some reason or another can't find (despite it being in the correct place and path), or can't use, is retried twice somehow. But the image is generated without it (getting "Lora not found" if you try it with only one such Lora). So, I'm not sure what's up with all this, but otherwise it seems to work. I think :)
 
 Otherwise it seems to work nice.
 
