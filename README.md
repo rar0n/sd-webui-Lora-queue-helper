@@ -19,20 +19,20 @@ To install from webui, go to Extensions -> Install from URL, paste https://githu
 Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 
 ## How to use
-1. Locate the **Script** drop-down menu in the bottom left corner of Automatic1111 web UI.
+1. Locate the **Script** drop-down menu in the bottom left corner of Automatic1111 web UI
 2. Select **Queue selected Loras (batch)** (Changed title from the original "Apply on every Lora")
-3. Under **Select Directory** select the folders containing the Lora you want to use. Or click **All**.
+3. Under **Select Directory** select the folders containing the Lora you want to use (Or click **All**)
    + I suggest to use **Use Custom Lora path** (Depending on your folder structure and amount of Loras)
-       + Paste in your folder path of the category of Lora(s) you want to test / use.
+       + Paste in your folder path of the category of Lora(s) you want to test / use
 4. Under **Lora** select the Lora's you want to test (or click **All**)
-   + At least one Lora folder has to be selected first for the Lora section to show up.
-   + If you've got a lot of folders, you have to scroll down past the **Select Directory** section end to reach it.
+   + At least one Lora folder has to be selected first for the Lora section to show up
+   + If you've got a lot of folders, you have to scroll down past the **Select Directory** section end to reach it
 5. **Generate!**
 
 ## Tips
 
-- Place your Lora into **sub-folders** by category (like "Vehicles", "Buildings", "Styles" or some such).
+- Place your Lora into **sub-folders** by category (like "Vehicles", "Buildings", "Styles" or some such)
 - Use built-in Lora configuration to store **Activation Text & Preferred Weight**, which will be automatically used in this script. Otherwise, it will only apply the Lora with default 1 weight 
-- It does **not** apply any negative prompt text (if present) in the Lora configuration file.
+- It does **not** apply any negative prompt text (if present) in the Lora configuration file
 
 Ideally(?) I'd like the "Select Directory" list to only show the parent folder of the Lora folders, and the Loras still be listed under the Lora heading below. But for now and the foreseeable future, this is it (Most people seem to have moved on to ComfyUI or Forge anyway. This might still work with Forge btw, not tested).
