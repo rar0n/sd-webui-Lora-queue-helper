@@ -21,7 +21,7 @@ Then go to Extensions -> Installed tab, Press "Apply and restart UI".
 ## How to use
 1. Locate the **Script** drop-down menu in the bottom left corner of Automatic1111 web UI.
 2. Select **Queue selected Loras (batch)** (Changed title from the original "Apply on every Lora")
-3. Under **Select Directory** select the folders containing the Lora you want to use. Or click "All".
+3. Under **Select Directory** select the folders containing the Lora you want to use. Or click **All**.
    + I suggest to use **Use Custom Lora path** (Depending on your folder structure and amount of Loras)
        + Paste in your folder path of the category of Lora(s) you want to test / use.
 4. Under **Lora** select the Lora's you want to test (or click **All**)
