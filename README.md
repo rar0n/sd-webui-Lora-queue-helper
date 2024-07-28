@@ -25,9 +25,9 @@ Then go to Extensions -> Installed tab, Press "Apply and restart UI".
    + I suggest to use **Use Custom Lora path** (Depending on your folder structure and amount of Loras)
        + Paste in your folder path of the category of Lora(s) you want to test / use.
 4. Under **Lora** select the Lora's you want to test (or click **All**)
-   + If you've got a lot of folders, you have to scroll down past the **Select Directory** section end to reach it.
    + At least one Lora folder has to be selected first for the Lora section to show up.
-5. Generate!
+   + If you've got a lot of folders, you have to scroll down past the **Select Directory** section end to reach it.
+5. **Generate!**
 
 ## Tips
 
